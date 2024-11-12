@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #890783;
+    --secondary-color: #9842D9;
+    --font-size-base: 1rem;
+    --font-size-lg: 2.5rem;
+    --font-size-md: 1.75rem;
+    --font-size-sm: 1.25rem;
+    --padding-base: 1rem;
+    --padding-lg: 2rem;
+    --gap-base: 1rem;
+    --circle-size: 12.5rem; 
+    --circle-margin: 1.875rem; 
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    overflow-x: hidden;
+    font-size: var(--font-size-base);
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    text-align: center;
+    padding: var(--padding-base);
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+#section-empty {
+    background-color: var(--secondary-color);
+    height: auto;
+    min-height: 600px;
+    width: 100%;
+}
+
+#section-main {
+    padding: var(--padding-lg);
+}
+
+p {
+    font-size: var(--font-size-md);
+    text-align: justify;
+    padding: var(--padding-lg) var(--padding-base);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+    color: var(--main-color);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    height: 0.125rem;
+    background-color: var(--main-color);
+}
+
+#section-team {
+    padding: 0 var(--padding-base) var(--padding-lg) var(--padding-base);
+    color: var(--main-color);
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+}
+
+h6 {
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+}
+
+#section-team > div {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-base);
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+}
+
+#section-team > div > div {
+    width: 30%;
+    text-align: center;
+    margin: 0;
+}
+
+.circle {
+    margin: var(--circle-margin);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@media (max-width: 1200px) {
+    #section-team > div > div {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    #section-team > div > div {
+        width: 100%; 
+    }
+    
+    #section-team {
+        padding: 0 var(--padding-base);
+    }
+    
+    .circle {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: var(--font-size-md);
+    }
+    
+    p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .circle {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+}
